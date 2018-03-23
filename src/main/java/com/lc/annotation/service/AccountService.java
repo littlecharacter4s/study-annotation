@@ -1,14 +1,17 @@
 package com.lc.annotation.service;
 
 import com.lc.annotation.custom.Observer;
+import com.lc.annotation.pojo.Result;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AccountService {
     @Observer("orderIncomeObserver")
-    public Object handleOrderIncome(Long sid, Long businessId) {
+    public Result handleOrderIncome(Long sid, Long businessId) {
         System.out.println("handleOrderIncome:处理订单收入!");
-        return null;
+        Result result = new Result("success");
+        result.setData("asodfhasdlfhasdlkf");
+        return result;
     }
 
     @Observer("bonusImportObserver")
