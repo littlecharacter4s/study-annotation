@@ -20,6 +20,7 @@ public class AccountUpdateAspect {
     public Object around(ProceedingJoinPoint joinPoint, Observer observer) {
         String observerName = observer.value();
         AccountObserver accountObserver = (AccountObserver)ApplicationContextUtil.getApplicationContext().getBean(observerName);
+        System.out.println("joinPoint=" + joinPoint.toString());
         return accountObserver.adjust(joinPoint);
     }
 }
