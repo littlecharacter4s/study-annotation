@@ -4,6 +4,7 @@ import com.lc.annotation.custom.Strategy;
 import com.lc.annotation.strategy.TestStrategy;
 import com.lc.annotation.util.ApplicationContextUtil;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class StrategyFactory {
@@ -14,7 +15,7 @@ public class StrategyFactory {
         private StrategyFactoryInner() {
         }
 
-        private static Map<String, TestStrategy> strategyMap;
+        private static Map<String, TestStrategy> strategyMap = new HashMap<>();
 
         static {
             ApplicationContextUtil.getApplicationContext()
