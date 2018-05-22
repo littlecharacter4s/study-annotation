@@ -1,12 +1,12 @@
 package com.lc.annotation.service;
 
-import com.lc.annotation.custom.Observer;
+import com.lc.annotation.custom.Monitor;
 import com.lc.annotation.pojo.Result;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AccountService {
-    @Observer("orderIncomeObserver")
+    @Monitor("orderIncomeMonitor")
     public Result handleOrderIncome(Long sid, Long businessId) {
         System.out.println("handleOrderIncome:处理订单收入!");
         Result result = new Result("success");
@@ -14,9 +14,13 @@ public class AccountService {
         return result;
     }
 
-    @Observer("bonusImportObserver")
+    @Monitor("bonusImportMonitor")
     public Object handleBonusImport(Long sid, Long businessId) {
         System.out.println("handleOrderIncome:处理奖金导入!");
         return null;
+    }
+
+    public void handle() {
+        this.handleOrderIncome(111111111L, 27L);
     }
 }

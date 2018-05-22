@@ -24,5 +24,6 @@ public class BaseTest {
             System.out.println("testObserver:处理失败!");
         }
         service.handleBonusImport(111111111L, 27L);
+        service.handle(); //aop的原理是动态代理，这里没有用到代理类，而是用this，所以监控不到
     }
 }
