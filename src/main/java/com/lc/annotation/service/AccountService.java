@@ -20,6 +20,10 @@ public class AccountService {
         return null;
     }
 
+    public void proxy() {
+        System.out.println("测试代理！");
+    }
+
     public void handle() {
         this.handleOrderIncome(111111111L, 27L);
     }

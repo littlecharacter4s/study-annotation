@@ -26,4 +26,11 @@ public class BaseTest {
         service.handleBonusImport(111111111L, 27L);
         service.handle(); //aop的原理是动态代理，这里没有用到代理类，而是用this，所以监控不到
     }
+
+    @Test
+    public void testProxy () {
+        AccountService service = ApplicationContextUtil.getApplicationContext().getBean(AccountService.class);
+        service.proxy();
+        System.out.println("测试结束！");
+    }
 }
