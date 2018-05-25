@@ -1,4 +1,4 @@
-package com.lc.annotation.observer;
+package com.lc.annotation.monitor;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.springframework.stereotype.Component;

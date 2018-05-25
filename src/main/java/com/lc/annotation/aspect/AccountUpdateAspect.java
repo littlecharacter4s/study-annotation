@@ -1,7 +1,7 @@
 package com.lc.annotation.aspect;
 
 import com.lc.annotation.custom.Monitor;
-import com.lc.annotation.observer.AccountMonitor;
+import com.lc.annotation.monitor.AccountMonitor;
 import com.lc.annotation.util.ApplicationContextUtil;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

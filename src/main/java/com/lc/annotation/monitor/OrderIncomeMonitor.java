@@ -1,4 +1,4 @@
-package com.lc.annotation.observer;
+package com.lc.annotation.monitor;
 
 import com.lc.annotation.pojo.Result;
 import org.aspectj.lang.ProceedingJoinPoint;
