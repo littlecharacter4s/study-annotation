@@ -9,7 +9,7 @@ public class BonusImportMonitor implements AccountMonitor {
     public Object adjust(ProceedingJoinPoint joinPoint) {
         try {
             Object o = joinPoint.proceed();
-            System.out.println("BonusImportMonitor:奖金导入调整!");
+            System.out.println("BonusImportMonitor:奖金导入调整!!!");
             return o;
         } catch (Throwable throwable) {
             throwable.printStackTrace();

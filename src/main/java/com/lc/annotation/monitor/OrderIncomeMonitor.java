@@ -12,7 +12,7 @@ public class OrderIncomeMonitor implements AccountMonitor {
             Object o = joinPoint.proceed();
             Result result = (Result) o;
             if (result.isSuccess()) {
-                System.out.println("OrderIncomeMonitor:订单收入调整!" + result.getData());
+                System.out.println("OrderIncomeMonitor:订单收入调整!!!");
             }
             return o;
         } catch (Throwable throwable) {
