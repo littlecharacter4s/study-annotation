@@ -24,8 +24,11 @@ public class VerifyUtilTest {
         user.setCreateTime(new Date());
         user.setUpdateTime(new Date());
         user.setVersion(1);
+        long start = System.currentTimeMillis();
         Result result2 = VerifyUtil.verify(user);
+        long end = System.currentTimeMillis();
         System.out.println("测试结果:" + JSON.toJSONString(result2));
+        System.out.println("耗时：" + (end - start));
         Assert.assertTrue("测试结果", result2.isSuccess());
 
         user.setUid(0L);
